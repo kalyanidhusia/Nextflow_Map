@@ -2,8 +2,11 @@ params.index_dir = "/home/kdhusia/PROJECTS/nextflow_MAP/Nextflow_Map/ref"
 params.ref = "Agy99.fasta"
 params.fastq = "/home/kdhusia/PROJECTS/nextflow_MAP/Nextflow_Map/fastq/*_{R1,R2}*"
 
+params.bam_dir = "/home/kdhusia/PROJECTS/nextflow_MAP/Nextflow_Map/fastq/BAM"
 
 process mapping{
+
+publishDir("${params.bam_dir}", mode: 'copy') 
 
 input:
  path index_dir

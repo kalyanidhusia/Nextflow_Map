@@ -1,6 +1,6 @@
 # Nextflow_Map
 ![alt text](Screenshot.png "Mapping complete")
-we often face the challange of index path while mapping our fastq. In this we try to overcome this nextflow challenge of path issue
+we often face the challange of index path while mapping our fastq. In this we try to overcome this nextflow challenge of index path issue for a one paired reads P7741_R1.fastq.gz and P7741_R2.fastq.gz
 
 <br>
 Database: https://www.ebi.ac.uk/ena/browser/view/ERR3335404 <br>

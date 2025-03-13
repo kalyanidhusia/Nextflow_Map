@@ -9,24 +9,24 @@ Reference Sequence: `Agy99`  <br>
 
 The error in the pipeline_map.nf script occurred due to incorrect channel declarations, causing type mismatches between String and FileSystem objects.
 
-⚠ Issues Identified:
-1️⃣ Channel.fromPath{params.index_dir}
+⚠ Issues Identified: <br>
+1️⃣ Channel.fromPath{params.index_dir}<br>
 
-Issue: Used {} instead of (), leading to incorrect evaluation.
-Fix: Channel.fromPath(params.index_dir)
-2️⃣ Channel.of(params.ref)
+Issue: Used {} instead of (), leading to incorrect evaluation. <br>
+Fix: Channel.fromPath(params.index_dir) <br>
+2️⃣ Channel.of(params.ref) <br>
 
-Issue: Channel.of() is designed for lists, but params.ref is a single value.
-Fix: Channel.value(params.ref)
-3️⃣ Channel.fromFilePairs{params.fastq}
+Issue: Channel.of() is designed for lists, but params.ref is a single value. <br>
+Fix: Channel.value(params.ref) <br>
+3️⃣ Channel.fromFilePairs{params.fastq} <br>
 
-Issue: Used {} instead of (), preventing correct pairing of FASTQ files.
-Fix: Channel.fromFilePairs(params.fastq)
+Issue: Used {} instead of (), preventing correct pairing of FASTQ files. <br>
+Fix: Channel.fromFilePairs(params.fastq) <br>
 
-✅ Key Fixes Implemented:
+✅ Key Fixes Implemented: <br>
 ✔ Corrected channel declarations for index, ref, and fastq inputs.
 ✔ Ensured file paths are properly recognized without type mismatches.
 ✔ Resolved java.lang.String cannot be cast to java.nio.file.FileSystem error.
-
-Final Outcome:
+<br>
+Final Outcome: <br>
 After these corrections, the Nextflow script successfully runs without type conflicts, ensuring proper execution of the mapping process.

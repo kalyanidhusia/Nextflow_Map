@@ -21,10 +21,10 @@ bwa mem ${index_dir}/${ref} ${fastq} | samtools view -h -b -o ${sample_id}.bam -
 
 workflow {
 
-index_ch = Channel.fromPath{params.index_dir}
+index_ch = Channel.fromPath(params.index_dir)
 ref_ch = Channel.of(params.ref)
 
-fastq_ch = Channel.fromFilePairs{params.fastq}
+fastq_ch = Channel.fromFilePairs(params.fastq)
 
 mapping(index_ch,ref_ch,fastq_ch)
 mapping.out.view()

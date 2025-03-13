@@ -1,4 +1,5 @@
 # Nextflow_Map
+![alt text](Screenshot.png "Mapping complete")
 we often face the challange of index path while mapping our fastq. In this we try to overcome this nextflow challenge of path issue
 
 <br>
